@@ -1,0 +1,15 @@
+2018-05-01 13:50:43,408 - root - INFO - xiao 登陆成功
+2018-05-01 13:51:35,072 - root - INFO - xiao 登陆成功
+2018-05-01 13:56:00,207 - root - INFO - xiao 登陆成功
+2018-05-01 15:19:40,549 - root - INFO - xiao 登陆成功
+2018-05-01 15:19:50,380 - root - INFO - zhangsan 登陆失败1次
+2018-05-01 15:20:00,554 - root - INFO - xiao 登陆成功
+2018-05-01 15:20:24,150 - root - INFO - xiao 创建了zhangsan老师
+2018-05-01 15:20:38,392 - root - INFO - xiao 创建了s11班级
+2018-05-01 15:20:53,865 - root - INFO - xiao 创建了lisi学生
+2018-05-01 15:21:08,185 - root - INFO - xiao 登陆成功
+2018-05-01 15:21:25,066 - root - INFO - zhangsan 登陆成功
+2018-05-01 15:21:40,669 - root - INFO - zhangsan 修改了lisi学生成绩
+2018-05-01 15:22:49,851 - root - INFO - zhangsan 登陆成功
+2018-05-01 15:23:07,766 - root - INFO - zhangsan 修改了lisi学生成绩
+2018-05-01 15:24:04,755 - root - INFO - lisi 登陆成功
