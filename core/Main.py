@@ -2,16 +2,20 @@ import sys
 from conf import settings
 from core import Login
 from core.Personal import Personal
-from core.Manager import Manager
+from core.c import Manager
 from core.Teacher import Teacher
 from core.Student import Student
 from core.Prompt import Prompt
 
 
 def main():
-    ret = Login.Login().login()  # 执行登录程序
+    ret = Login.Login().login()  # 执行登录程序,返回字典
     if ret:
         clas = getattr(sys.modules['core.' + ret['role']], ret['role'])  # 根据角色名获取类名(角色名和类名一致)
+        '''
+        因为是from core.Manager import Manager,那么在sys.modules中，保存的是core.sys.modules
+        那么就需要拼凑出core.Manager,它指向的是一个py文件,文件里面有对应的Manager类
+        '''
         if ret['role'] == 'Manager':  # 判断角色为管理员
             obj = clas(ret)  # 实例化,ret返回格式如下{'username': 'xiao', 'role': 'Manager'}
         elif ret['role'] == 'Teacher':  # 判断角色为老师
@@ -27,7 +31,7 @@ def main():
         while True:
             # for key, item in enumerate(clas.operate_lst, 1):  # 获取每个角色类的operate_lst静态属性,显示的序列号从1开始
             #     print(str(key)+'.', item[0])
-            interlacing_color(clas.operate_lst)
+            interlacing_color(clas.operate_lst)  # 隔行换色
             num = input('输入您要做的操作序号：').strip()
             if num.isdigit():  # 判断数字
                 num = int(num)  # 转换数字类型
